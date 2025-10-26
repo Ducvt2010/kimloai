@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Chấm điểm phát âm - Kim loại</title>
+<style>
+  body {
+    background-color: #a5e887;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  h2 {
+    color: red;
+    font-weight: bold;
+  }
+  table {
+    border-collapse: collapse;
+    width: 85%;
+    margin: auto;
+    background-color: #f4ffdd;
+    font-size: 20px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.15);
+    border-radius: 10px;
+  }
+  th, td {
+    border: 2px solid #94cc6b;
+    padding: 10px;
+    text-align: center;
+  }
+  th {
+    background-color: #c9f9a5;
+  }
+  img {
+    width: 150px;
+    border-radius: 10px;
+  }
+  button {
+    font-size: 18px;
+    padding: 6px 12px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #eaffc1;
+    transition: background-color 0.2s;
+  }
+  button:hover {
+    background-color: #d6ffad;
+  }
+  .ipa {
+    color: red;
+    font-weight: bold;
+  }
+</style>
+</head>
+
+<body>
+<h2>5.2. KIM LOẠI HAY GẶP</h2>
+
+<table>
+  <tr>
+    <th>Tên nguyên tố</th>
+    <th>KHHH</th>
+    <th>Hình ảnh</th>
+    <th>Phiên âm</th>
+    <th>Nghe mẫu</th>
+    <th>Đọc lại</th>
+    <th>Điểm</th>
+  </tr>
+
+  <tr>
+    <td>Sodium</td>
+    <td>Na</td>
+    <td><img src="videos/Sodium.jpg" alt="Sodium"></td>
+    <td class="ipa">/ˈsəʊ.di.əm/</td>
+    <td><button onclick="speak('Sodium')">🔊</button></td>
+    <td><button onclick="check('Sodium',0)">🎙️</button></td>
+    <td id="score0">-</td>
+  </tr>
+
+  <tr>
+    <td>Potassium</td>
+    <td>K</td>
+    <td><img src="videos/Potassium.jpg" alt="Potassium"></td>
+    <td class="ipa">/pəˈtæs.i.əm/</td>
+    <td><button onclick="speak('Potassium')">🔊</button></td>
+    <td><button onclick="check('Potassium',1)">🎙️</button></td>
+    <td id="score1">-</td>
+  </tr>
+
+  <tr>
+    <td>Calcium</td>
+    <td>Ca</td>
+    <td><img src="videos/Calcium.jpg" alt="Calcium"></td>
+    <td class="ipa">/ˈkæl.si.əm/</td>
+    <td><button onclick="speak('Calcium')">🔊</button></td>
+    <td><button onclick="check('Calcium',2)">🎙️</button></td>
+    <td id="score2">-</td>
+  </tr>
+
+  <tr>
+    <td>Magnesium</td>
+    <td>Mg</td>
+    <td><img src="videos/Magnesium.jpg" alt="Magnesium"></td>
+    <td class="ipa">/mæɡˈniː.zi.əm/</td>
+    <td><button onclick="speak('Magnesium')">🔊</button></td>
+    <td><button onclick="check('Magnesium',3)">🎙️</button></td>
+    <td id="score3">-</td>
+  </tr>
+
+  <tr>
+    <td>Barium</td>
+    <td>Ba</td>
+    <td><img src="videos/Barium.jpg" alt="Barium"></td>
+    <td class="ipa">/ˈbeə.ri.əm/</td>
+    <td><button onclick="speak('Barium')">🔊</button></td>
+    <td><button onclick="check('Barium',4)">🎙️</button></td>
+    <td id="score4">-</td>
+  </tr>
+
+  <tr>
+    <td>Zinc</td>
+    <td>Zn</td>
+    <td><img src="videos/Zinc.jpg" alt="Zinc"></td>
+    <td class="ipa">/zɪŋk/</td>
+    <td><button onclick="speak('Zinc')">🔊</button></td>
+    <td><button onclick="check('Zinc',5)">🎙️</button></td>
+    <td id="score5">-</td>
+  </tr>
+
+  <tr>
+    <td>Aluminium</td>
+    <td>Al</td>
+    <td><img src="videos/Aluminium.jpg" alt="Aluminium"></td>
+    <td class="ipa">/ˌæljʊˈmɪn.i.əm/</td>
+    <td><button onclick="speak('Aluminium')">🔊</button></td>
+    <td><button onclick="check('Aluminium',6)">🎙️</button></td>
+    <td id="score6">-</td>
+  </tr>
+
+  <tr>
+  <td>Copper</td>
+  <td>Cu</td>
+  <td><img src="videos/Copper.jpg" alt="Copper"></td>
+  <td class="ipa">/ˈkɒp.ər/</td>
+  <td><button onclick="speak('Copper')">🔊</button></td>
+  <td><button onclick="check('Copper',7)">🎙️</button></td>
+  <td id="score7">-</td>
+</tr>
+
+<tr>
+  <td>Iron</td>
+  <td>Fe</td>
+  <td><img src="videos/Iron.jpg" alt="Iron"></td>
+  <td class="ipa">/ˈaɪ.ən/</td>
+  <td><button onclick="speak('Iron')">🔊</button></td>
+  <td><button onclick="check('Iron',8)">🎙️</button></td>
+  <td id="score8">-</td>
+</tr>
+
+<tr>
+  <td>Silver</td>
+  <td>Ag</td>
+  <td><img src="videos/Silver.jpg" alt="Silver"></td>
+  <td class="ipa">/ˈsɪl.vər/</td>
+  <td><button onclick="speak('Silver')">🔊</button></td>
+  <td><button onclick="check('Silver',9)">🎙️</button></td>
+  <td id="score9">-</td>
+</tr>
+
+<tr>
+  <td>Tin</td>
+  <td>Sn</td>
+  <td><img src="videos/Tin.jpg" alt="Tin"></td>
+  <td class="ipa">/tɪn/</td>
+  <td><button onclick="speak('Tin')">🔊</button></td>
+  <td><button onclick="check('Tin',10)">🎙️</button></td>
+  <td id="score10">-</td>
+</tr>
+
+<tr>
+  <td>Gold</td>
+  <td>Au</td>
+  <td><img src="videos/Gold.jpg" alt="Gold"></td>
+  <td class="ipa">/ɡəʊld/</td>
+  <td><button onclick="speak('Gold')">🔊</button></td>
+  <td><button onclick="check('Gold',11)">🎙️</button></td>
+  <td id="score11">-</td>
+</tr>
+
+<tr>
+  <td>Nickel</td>
+  <td>Ni</td>
+  <td><img src="videos/Nickel.jpg" alt="Nickel"></td>
+  <td class="ipa">/ˈnɪk.əl/</td>
+  <td><button onclick="speak('Nickel')">🔊</button></td>
+  <td><button onclick="check('Nickel',12)">🎙️</button></td>
+  <td id="score12">-</td>
+</tr>
+
+<tr>
+  <td>Mercury</td>
+  <td>Hg</td>
+  <td><img src="videos/Mercury.jpg" alt="Mercury"></td>
+  <td class="ipa">/ˈmɜː.kjʊr.i/</td>
+  <td><button onclick="speak('Mercury')">🔊</button></td>
+  <td><button onclick="check('Mercury',13)">🎙️</button></td>
+  <td id="score13">-</td>
+</tr>
+</table>
+
+<script>
+function speak(text) {
+  const utter = new SpeechSynthesisUtterance(text);
+  utter.lang = "en-US";
+  speechSynthesis.speak(utter);
+}
+
+function levenshtein(a, b) {
+  a = a || ""; b = b || "";
+  const m = a.length, n = b.length;
+  const dp = Array.from({length: m + 1}, () => Array(n + 1).fill(0));
+  for (let i = 0; i <= m; i++) dp[i][0] = i;
+  for (let j = 0; j <= n; j++) dp[0][j] = j;
+  for (let i = 1; i <= m; i++) {
+    for (let j = 1; j <= n; j++) {
+      const cost = a[i-1] === b[j-1] ? 0 : 1;
+      dp[i][j] = Math.min(dp[i-1][j]+1, dp[i][j-1]+1, dp[i-1][j-1]+cost);
+    }
+  }
+  return dp[m][n];
+}
+
+function check(expected, id) {
+  const rec = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+  rec.lang = "en-US";
+  rec.interimResults = false;
+  rec.maxAlternatives = 1;
+
+  const cell = document.getElementById("score" + id);
+  cell.innerText = "🎤...";
+  cell.style.color = "black";
+
+  let timeout = setTimeout(() => {
+    try { rec.stop(); } catch(e){}
+    cell.innerText = "0%";
+    cell.style.color = "red";
+  }, 7000);
+
+  rec.onresult = (e) => {
+    clearTimeout(timeout);
+    const said = e.results[0][0].transcript.toLowerCase().trim();
+    const expectedText = expected.toLowerCase();
+    const normalize = s => s.replace(/[^a-z\s]/g,"").replace(/\s+/g," ").trim();
+    const s1 = normalize(said), s2 = normalize(expectedText);
+    const dist = levenshtein(s1, s2);
+    const maxLen = Math.max(s1.length, s2.length);
+    const sim = maxLen ? (1 - dist/maxLen) : 0;
+
+    let score = 0;
+    if (sim >= 0.95) score = 100;
+    else if (sim >= 0.75) score = 80;
+    else if (sim >= 0.5) score = 50;
+    else if (sim >= 0.25) score = 25;
+
+    cell.innerText = Math.round(score) + "%";
+    cell.style.color = score === 100 ? "green" :
+                       score >= 80 ? "orange" :
+                       score >= 50 ? "goldenrod" : "red";
+  };
+
+  rec.onerror = () => {
+    clearTimeout(timeout);
+    cell.innerText = "0%";
+    cell.style.color = "red";
+  };
+
+  rec.start();
+}
+</script>
+</body>
+</html>
